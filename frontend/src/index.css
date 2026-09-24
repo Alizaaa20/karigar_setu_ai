@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply font-body text-ink;
+  /* Backdrop behind the mobile frame — a deep indigo so the phone reads
+     like a physical device sitting on a table, not a bare browser tab. */
+  background-color: #1b2340;
+  background-image: radial-gradient(circle at 20% 20%, rgba(232, 163, 61, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(168, 50, 45, 0.1), transparent 45%);
+  min-height: 100vh;
+}
+
+/* Hide scrollbars inside the simulated phone viewport, keep it functional */
+.phone-scroll::-webkit-scrollbar {
+  width: 0px;
+}
+.phone-scroll {
+  scrollbar-width: none;
+}
+
+/* Signature motif: a dashed "kantha stitch" rule used between flow steps.
+   Ties the UI's structural dividers to the artisan-textile subject matter
+   instead of a generic <hr>. */
+.stitch-divider {
+  border: none;
+  border-top: 2px dashed theme('colors.thread');
+  margin: 1.75rem 0;
+}
+
+@keyframes toast-in {
+  from {
+    transform: translate(-50%, 12px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+.animate-toast-in {
+  animation: toast-in 0.25s ease-out;
+}

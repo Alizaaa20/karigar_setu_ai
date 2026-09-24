@@ -1,0 +1,24 @@
+{
+  "short_name": "Karigar",
+  "name": "Karigar Setu — Voice & Edge AI Cataloging",
+  "description": "AI-driven market linkage & smart cataloging app for marginalized artisans.",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#1b2340",
+  "theme_color": "#212C4F",
+  "display": "standalone",
+  "orientation": "portrait"
+}
